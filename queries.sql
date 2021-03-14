@@ -15,3 +15,7 @@ DROP TABLE `techjobs`.`job`;
 
 
 ## Part 4: Test it with SQL
+SELECT name, description
+FROM skill
+WHERE id IN (SELECT skills_id FROM job_skills WHERE jobs_id IS NOT NULL)
+ORDER BY name;
